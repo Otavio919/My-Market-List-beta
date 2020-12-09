@@ -77,7 +77,11 @@ include('./conexao.php');
         $senha = $_POST['password'];
         
           $validacao =  listar();
-        foreach($validacao as $e) { 
+      if ($login = $login && $senha = $senha){
+      echo "<script>window.location.href='home.php';</script>";
+      }
+      //tive que fazer essa atrocidade para voces poderem ver um pouco mais da parte de design
+        /*foreach($validacao as $e) { 
       
         if( $e['nm_login'] != $login ){
            // alert('login efetuado com sucesso');
@@ -91,7 +95,7 @@ include('./conexao.php');
 
         }
 
-       }
+       }*/
 
     }
 
